@@ -1,2 +1,2 @@
 # starter-plugin
-starter plugin for 11 online
+Starter plugin for 11 online using CMB2
