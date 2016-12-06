@@ -4,16 +4,18 @@ var config      = require('./config.json');
 
 
 gulp.task('deploy', function() {
-  gulp.src('*')
+  return gulp.src('*')
     .pipe(rsync({
       root: '',
       hostname: config.hostname,
       username: 'serverpilot',
       destination: config.destination,
-      archive: true,
       silent: false,
       compress: true,
-      verbose: true,
+      incremental: true,
+      emptyDirectories: true,
+      recursive: true,
+      exclude: ['node_modules', 'config.json', 'gulpfile.js', 'package.json']
     }));
 });
 
