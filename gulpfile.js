@@ -8,7 +8,7 @@ gulp.task('deploy', function() {
     .pipe(rsync({
       root: '',
       hostname: config.hostname,
-      username: 'root',
+      username: 'serverpilot',
       destination: config.destination,
       archive: true,
       silent: false,
