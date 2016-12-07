@@ -3,11 +3,17 @@ Starter plugin for 11 online using CMB2 for custom meta boxes
 
 # Gulp Tasks
 ### 1) gulp deploy
-Deploys plugin, based on config.json
+Deploys plugin, based on config.json. Note: this deploy task is ssh based, so your server needs to allow you to connect over ssh. If you are not on the 11 online team, you'll also need to change the username in gulpfile.js
 
-# Setting up Gulp Deploy for Windows
+# Setting up Gulp Deploy for OSX
+The deploy task uses rsync, which should already be installed. Just set up config.json and run
+```
+gulp deploy
+```
 
-This all has to happen in git bash
+# Setting up Gulp Deploy for Windows (first time per vagrant box)
+
+This all has to happen in git bash. Once your vagrant box has been set up with these steps, you can just use steps 3, 6 and 7.
 
 ## 1) Add your key to ssh-agent
 List the keys that have been added to ssh-agent, if your key is not list it, then add it. List again to double check.
@@ -46,7 +52,10 @@ sudo ln -s node_modules/gulp/bin/gulp.js /usr/bin/gulp
 ```
 A symbolic link (also symlink or soft link) is the nickname for any file that contains a reference to another file or directory in the form of an absolute or relative path and that affects pathname resolution.
 
-## 6) Gulp Deloy!!
+## 6) Set up config.json if it is not already set up
+You need the server hostname and the destination is the path on the server for deployment
+
+## 7) Gulp Deloy!!
 You may have to add the RSA fingerprint to your known hosts file, just say yes.
 ```
 gulp deploy
