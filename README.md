@@ -13,7 +13,7 @@ gulp deploy
 
 # Setting up Gulp Deploy for Windows (first time per vagrant box)
 
-This all has to happen in git bash. Once your vagrant box has been set up with these steps, you can just use steps 3, 6 and 7.
+This all has to happen in git bash. If your vagrant box has already been set up with these steps, you can just use steps 3, 6 and 7.
 
 ## 1) Add your key to ssh-agent
 List the keys that have been added to ssh-agent, if your key is not list it, then add it. List again to double check.
