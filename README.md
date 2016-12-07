@@ -1,4 +1,4 @@
-# Rtarter Plugin
+# Starter Plugin
 Starter plugin for 11 online using CMB2 for custom meta boxes
 
 # Gulp Tasks
